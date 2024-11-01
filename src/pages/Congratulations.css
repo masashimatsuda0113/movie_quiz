@@ -1,0 +1,83 @@
+@keyframes gradient-background {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+  }
+  
+  .congratulations-container {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(45deg, #ff6b6b, #f9cb28, #51cf66, #339af0);
+    background-size: 300% 300%;
+    animation: gradient-background 10s ease infinite;
+    overflow: hidden;
+  }
+  
+  .congratulations-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    animation: bounce 1.5s ease infinite;
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+  
+  .congratulations-text {
+    font-size: 1.5rem;
+    color: #fff;
+    margin: 20px;
+    animation: fade-in 2s ease;
+  }
+  
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .celebration-button {
+    background: #ffd700;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .celebration-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+  }
+  
+  .firework-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: url('https://cdn.pixabay.com/photo/2017/12/18/12/27/fireworks-3029716_960_720.png') no-repeat center center;
+    background-size: cover;
+    opacity: 0.2;
+  }
+  
